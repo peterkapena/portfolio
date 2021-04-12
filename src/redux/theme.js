@@ -1,5 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
+export const THEME_CONSTANTS = { TOGGLE_THEME: 'TOGGLE_THEME' }
+
 const theme = (type) => createMuiTheme({
     palette: {
         type: type,
@@ -22,9 +24,16 @@ const theme = (type) => createMuiTheme({
     }
 })
 
-export const themeReducer = (state = { theme: theme('light') }) => {
-    return {
-        ...state,
-        theme: theme(state.theme.palette.type === 'light' ? 'dark' : 'light')
+export const themeReducer = (state = { theme: theme(localStorage.getItem('theme') ?? 'light') }, action) => {
+    switch (action.type) {
+        case THEME_CONSTANTS.TOGGLE_THEME:
+            let s = {
+                ...state,
+                theme: theme(state.theme.palette.type === 'light' ? 'dark' : 'light')
+            }
+            localStorage.setItem('theme', s.theme.palette.type)
+            return s;
+        default:
+            return state;
     }
 }

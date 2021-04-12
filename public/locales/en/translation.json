@@ -1,3 +1,16 @@
 {
-    "h4": "Peter"
+    "profile": {
+        "job": "Job ",
+        "rentMe": "Rent Me",
+        "workingHist": "Working history",
+        "edHist": "Education history",
+        "highSchool": "High school"
+    },
+    "footer": {
+        "designedBy": "Designed and developed"
+    },
+    "appBar": {
+        "skillsEx": "Skills and expertises",
+        "skills": "Skills"
+    }
 }

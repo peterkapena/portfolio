@@ -1,3 +1,16 @@
 {
-    "h4": "Pierre"
+    "profile": {
+        "job": "Boulot",
+        "rentMe": "Me louer",
+        "workingHist": "Expérience Professionnelle",
+        "edHist": "Éducation",
+        "highSchool": "Lycée"
+    },
+    "footer": {
+        "designedBy": "Conçu et développé par"
+    },
+    "appBar": {
+        "skillsEx": "Compétences et expertises",
+        "skills": "Compétences"
+    }
 }
