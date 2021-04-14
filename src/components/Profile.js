@@ -36,7 +36,7 @@ const Profile = () => {
             <div className='profile_name'>
                 <span className='name'>{data.name}</span>
                 <br />
-                <span className='title'>{data.title}</span>
+                <span className='title'>{t('profile.title')}</span>
             </div>
             <figure className='profile_image'>
                 <img src={displaypic} alt=''></img>

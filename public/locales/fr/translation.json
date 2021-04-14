@@ -4,13 +4,31 @@
         "rentMe": "Me louer",
         "workingHist": "Expérience Professionnelle",
         "edHist": "Éducation",
-        "highSchool": "Lycée"
+        "highSchool": "Lycée",
+        "title": "Ingénieur logiciel"
     },
     "footer": {
         "designedBy": "Conçu et développé par"
     },
     "appBar": {
         "skillsEx": "Compétences et expertises",
-        "skills": "Compétences"
+        "skills": "Compétences",
+        "showBlogNotice": "Cette fonctionnalité n'est pas encore implémentée"
+    },
+    "popup": {
+        "tile": {
+            "showNotice": "Message",
+            "showConfirm": "Confirmez"
+        },
+        "message": {
+            "postAdvert": {
+                "notSignedIn": "Veuillez vous connecter pour poster un article"
+            }
+        },
+        "yes": "Oui",
+        "no": "Non"
+    },
+    "resume": {
+        "wordkDesc": "Développer et soutenir un produit de gestion de base de données basé sur le Web (DevMan) à utiliser dans la gestion des bourses,        Secteur de l'avancement universitaire et de l'investissement social d'entreprise (CSI) utilisant ces technologies: C #, VB.NET, ASP.NET, SQL"
     }
 }

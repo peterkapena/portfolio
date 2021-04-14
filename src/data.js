@@ -1,9 +1,7 @@
 import { Facebook, GitHub, LinkedIn, Twitter } from '@material-ui/icons';
-import i18n from './i18n'
 
 const data = {
     name: "Kapena Peter Lumumba",
-    title: i18n.language === 'en' ? "Software Engineer" : 'Ingénieur logiciel',
     job: "Full Stack Developer",
     email: "peterkapenapeter@gmail.com",
     languages: "English & French",
@@ -24,12 +22,6 @@ const data = {
             icon: <LinkedIn></LinkedIn>,
             link: "https://www.linkedin.com/in/kapena-peter-lumumba-7344b8158/",
         }
-    ],
-    wordkDesc: [
-        `Design and develop user requirements.
-        Troubleshoot/Debug and fix code bugs.
-	    Support users
-	    Code Documentation`
     ],
     expertise: [
         'C# and Ms Visual Basics', 'NET Core, .NET Framework', 'Razor, Blazor, GRPC, MVC, SPA', 'JavaScript'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { THEME_CONSTANTS } from '../redux/theme.js';
 import data from '../data'
 import { useTranslation } from 'react-i18next';
+import { ShowNotice } from './common'
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -86,7 +87,9 @@ export default function NavBar() {
     const theme = useSelector(state => state.theme)
     const classes = useStyles();
 
-    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
+    const [showBlogNotice, setShowBlogNotice] = useState()
+
     const history = useHistory()
 
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -98,11 +101,11 @@ export default function NavBar() {
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);
     };
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const leftSide = [
-        <Button onClick={() => navTo('/skills')}>{t("appBar.skills")}</Button>,
-        <Button>BLOG</Button>
+        <Button onClick={() => { navTo('/skills'); setMobileMoreAnchorEl(undefined) }}>{t("appBar.skills")}</Button>,
+        <Button onClick={() => { setShowBlogNotice(true); setMobileMoreAnchorEl(undefined) }}>BLOG</Button>
     ]
 
     const mobileMenuId = 'primary-search-account-menu-mobile';
@@ -151,6 +154,7 @@ export default function NavBar() {
                 </Toolbar>
             </AppBar>
             { renderMobileMenu}
+            {showBlogNotice && <ShowNotice message={t('appBar.showBlogNotice')} onOk={() => setShowBlogNotice(false)}></ShowNotice>}
         </div >
     );
 }

@@ -2,11 +2,9 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import BasicTimeline from '../components/Timeline';
-import data from '../data'
 import { SchoolOutlined, WorkOutlined } from '@material-ui/icons';
 import TimeLineComponent from '../components/WorkHistory';
 import { useTranslation } from 'react-i18next';
-import { Avatar, Chip, Divider } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -39,7 +37,8 @@ const Resume = () => {
             sep: {
                 clr: "primary",
             },
-            cntnt: <TimeLineComponent title='Software Developer - Is Kidz Africa' when='2019 - Present' desc={data.wordkDesc[0]}></TimeLineComponent>
+            cntnt: <TimeLineComponent title='Software Developer - Is Kidz Africa' when='2019 - Present'
+                desc={t('resume.wordkDesc')}></TimeLineComponent>
         }
     ];
 
@@ -86,7 +85,7 @@ const Resume = () => {
                     <BasicTimeline timelines={educationTimelines} ></BasicTimeline>
                 </Grid>
             </Grid>
-            
+
             <br />
             <br />
         </div>

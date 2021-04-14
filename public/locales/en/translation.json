@@ -4,13 +4,31 @@
         "rentMe": "Rent Me",
         "workingHist": "Working history",
         "edHist": "Education history",
-        "highSchool": "High school"
+        "highSchool": "High school",
+        "title": "Software Engineer"
     },
     "footer": {
-        "designedBy": "Designed and developed"
+        "designedBy": "Designed and developed by"
     },
     "appBar": {
         "skillsEx": "Skills and expertises",
-        "skills": "Skills"
+        "skills": "Skills",
+        "showBlogNotice": "This feature is not implemented yet"
+    },
+    "popup": {
+        "tile": {
+            "showNotice": "Please note",
+            "showConfirm": "Please confirm"
+        },
+        "message": {
+            "postAdvert": {
+                "notSignedIn": "Please log in or sign in to post an ad"
+            }
+        },
+        "yes": "Yes",
+        "no": "No"
+    },
+    "resume": {
+        "wordkDesc": "Expanding and supporting a web based database management product (DevMan) for use in the Bursary management,        University Advancement an Corporate Social Investment (CSI) sectors using these technologies: C#, VB.NET, ASP.NET, SQL"
     }
 }
