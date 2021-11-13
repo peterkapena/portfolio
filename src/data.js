@@ -27,11 +27,11 @@ const data = {
         'C# and Ms Visual Basics', 'NET Core, .NET Framework', 'Razor, Blazor, GRPC, MVC, SPA', 'JavaScript'
         , 'Node JS, React JS, React Native', 'jQuery', 'Flutter or Dart', 'Ms SQL Server, MongoDB, SQLite',
         'WordPress', 'Java EE, JSP, JSF, Java EL', 'Material UI, Bootstrap, HTML, CSS', 'C / C++', 'Azure',
-        'Firebase', 'AWS', 'Front-end and Back-end'
+        'Firebase', 'AWS', 'Front-end and Back-end', 'AWS', 'GraphQL', 'Firebase'
     ],
     skills: [
         "REST API", "SOAP Services", "Google Remote Procedures Call - GRPC", "Visual Studio, VS Code, Android Studio",
-        "Git, GitHub, Azure DevOps", "Ms Office 365", "Microsoft server 2012 & 2019", "Windows 10", "Ubuntu – Linux",
+        "Git, GitHub, Azure DevOps", "Ms Office 365", "Microsoft server", "Windows 10", "Ubuntu – Linux",
         "Microsoft IIS"
     ]
 }

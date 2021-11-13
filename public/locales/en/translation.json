@@ -29,6 +29,7 @@
         "no": "No"
     },
     "resume": {
-        "wordkDesc": "Expanding and supporting a web based database management product (DevMan) for use in the Bursary management,        University Advancement an Corporate Social Investment (CSI) sectors using these technologies: C#, VB.NET, ASP.NET, SQL"
+        "wordkDesc": "Expanding and supporting a web based database management product (DevMan) for use in the Bursary management, University Advancement an Corporate Social Investment (CSI) sectors using these technologies: C#, VB.NET, ASP.NET, SQL, Razor, Blazor, GRPC, MVC and more.",
+        "freelancerDesc": "General software projects request from clients handled with these tech stack: AWS, GraphQL, Firebase, NodeJS, JavaScript, RecatJS, React Native, Flutter and more."
     }
 }

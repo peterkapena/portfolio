@@ -39,6 +39,13 @@ const Resume = () => {
             },
             cntnt: <TimeLineComponent title='Software Developer - Is Kidz Africa' when='2019 - Present'
                 desc={t('resume.wordkDesc')}></TimeLineComponent>
+        },
+        {
+            sep: {
+                clr: "primary",
+            },
+            cntnt: <TimeLineComponent title='Freelancer' when='2020 - Present'
+                desc={t('resume.freelancerDesc')}></TimeLineComponent>
         }
     ];
 

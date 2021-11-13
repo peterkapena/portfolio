@@ -29,6 +29,7 @@
         "no": "Non"
     },
     "resume": {
-        "wordkDesc": "Développer et soutenir un produit de gestion de base de données basé sur le Web (DevMan) à utiliser dans la gestion des bourses,        Secteur de l'avancement universitaire et de l'investissement social d'entreprise (CSI) utilisant ces technologies: C #, VB.NET, ASP.NET, SQL"
+        "wordkDesc": "Développer et soutenir un produit de gestion de base de données basé sur le Web (DevMan) à utiliser dans la gestion des bourses, Secteur de l'avancement universitaire et de l'investissement social d'entreprise (CSI) utilisant ces technologies: C #, VB.NET, ASP.NET, SQL, Razor, Blazor, GRPC, MVC et plus.",
+        "freelancerDesc": "Demandes générales de projets logiciels des clients traités avec ces piles technologiques : AWS, GraphQL, Firebase, NodeJS, JavaScript, RecatJS, React Native, Flutter et plus."
     }
 }

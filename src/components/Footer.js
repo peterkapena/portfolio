@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
     },
     designedBy: {
-        color: '#00d732'
+        color: '#0bbbbb'
     },
     languages: {
         width: '30%',
