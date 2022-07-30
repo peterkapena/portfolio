@@ -19,9 +19,7 @@ const App = () => {
       <Paper>
         <Container maxWidth='md' style={{ padding: 0 }} >
           <Grid justify="center" container spacing={2} direction="row">
-            <Grid item xs={12} sm={12} md={5} lg={4}>
-              <Profile></Profile>
-            </Grid>
+            
             <Grid item xs>
               <BrowserRouter>
                 <NavBar></NavBar>
@@ -32,9 +30,12 @@ const App = () => {
               </BrowserRouter>
               <br />
 
-              <Footer></Footer>
+            </Grid>
+            <Grid item xs={12} sm={12} md={5} lg={4}>
+              <Profile></Profile>
             </Grid>
           </Grid>
+              <Footer></Footer>
         </Container>
       </Paper>
 

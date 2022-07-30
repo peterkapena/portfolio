@@ -86,10 +86,10 @@ const Resume = () => {
 
             <Grid justify="center" container spacing={2} direction="row">
                 <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <BasicTimeline timelines={workTimeLines} ></BasicTimeline>
-                </Grid>
-                <Grid item xs={12} sm={12} md={6} lg={6}>
                     <BasicTimeline timelines={educationTimelines} ></BasicTimeline>
+                </Grid> 
+                      <Grid item xs={12} sm={12} md={6} lg={6}>
+                    <BasicTimeline timelines={workTimeLines} ></BasicTimeline>
                 </Grid>
             </Grid>
 
