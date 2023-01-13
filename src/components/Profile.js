@@ -22,13 +22,7 @@ const Profile = () => {
                 clr: "primary",
             },
             cntnt: <><b>Email</b><span> {data.email}</span></>
-        },
-        {
-            sep: {
-                clr: "primary",
-            },
-            cntnt: <><b>{t('profile.job')}</b><span> {data.job}</span></>
-        }
+        }      
     ];
 
     return (

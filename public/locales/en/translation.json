@@ -5,7 +5,7 @@
         "workingHist": "Working history",
         "edHist": "Education history",
         "highSchool": "High school",
-        "title": "Software Engineer"
+        "title": "Software Developer"
     },
     "footer": {
         "designedBy": "Designed and developed by"
@@ -29,7 +29,7 @@
         "no": "No"
     },
     "resume": {
-        "wordkDesc": "Expanding and supporting a web based database management product (DevMan) for use in the Bursary management, University Advancement an Corporate Social Investment (CSI) sectors using these technologies: C#, VB.NET, ASP.NET, SQL, Razor, Blazor, GRPC, MVC and more.",
+        "wordkDesc": "\n- Create, test, debug, document and implement web-based software for Is Kidz Africa utilizing skills in .NET, C# and VB.net.\n\n- Work directly with end – users to maximize efficiencies and user-friendliness.\n\n- Employ effective communication skills to “Train the Trainers or Technical Support”.\n\n- Maintain current software and computer programs by making modest adjustments as necessary.\n\n- Program web application forms to predefined specifications for interactive bursary and social grants applications.\n\n- Develop, implement, modify, and maintain the management software, DevMan, by adding features effectively into existing or legacy system.\n\n- Version control and management using Git.\n\n- Implement the software with cloud infrastructures and hosted servers such as Azure, AWS, and Google Cloud.\n\n- Maintained existing computer programs by making minor modifications as required.",
         "freelancerDesc": "General software projects request from clients handled with these tech stack: AWS, GraphQL, Firebase, NodeJS, JavaScript, RecatJS, React Native, Flutter and more."
     }
 }

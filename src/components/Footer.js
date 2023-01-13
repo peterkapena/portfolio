@@ -40,16 +40,11 @@ const Footer = () => {
 
     return (
         <div className={classes.root + ' container_shadow'}>
-            <div className={classes.paper}  >
-                <div>
-                    <h3>{data.name}</h3>
-                </div>
+            <div className={classes.paper}  >               
                 <div>
                     <h5> ©  {new Date().getFullYear()} - {t('footer.designedBy')} <span className={classes.designedBy}>Peter</span></h5>
                 </div>
             </div>
-            <br/>
-            <hr/>
             <div className={classes.languages}>
                 <Button className={classes.languageBtn} size="small" color="primary"
                     onClick={() => { changeLanguage('en'); }}>English</Button>
