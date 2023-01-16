@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Avatar, Chip, Divider } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import { ArrowLeft, ArrowLeftOutlined, ArrowLeftRounded, ArrowLeftSharp, ArrowLeftTwoTone, ArrowRight, ChevronLeft } from "@material-ui/icons";
+import { ChevronLeft } from "@material-ui/icons";
 
 const useStyles = makeStyles(() => ({
   root: {},

@@ -2,7 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import BasicTimeline from "../components/Timeline";
-import { ArrowRight, ChevronRightOutlined, SchoolOutlined, WorkOutlined } from "@material-ui/icons";
+import {
+  ChevronRightOutlined,
+  SchoolOutlined,
+  WorkOutlined,
+} from "@material-ui/icons";
 import TimeLineComponent from "../components/WorkHistory";
 import { useTranslation } from "react-i18next";
 import { Button } from "@material-ui/core";
