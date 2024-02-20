@@ -12,3 +12,5 @@ EXPOSE 443
 
 # Start Nginx when the container runs
 CMD ["nginx", "-g", "daemon off;"]
+
+# docker run -d --name portfolio --network peterkapena portfolio
