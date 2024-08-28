@@ -1,16 +1,15 @@
-# Use an official Nginx runtime as the base image
-FROM arm64v8/nginx:alpine
+# Stage 1: Build the React application
+FROM node:20-alpine as build
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
 
-# Copy the build files into the default Nginx webserver directory
-COPY build/ /usr/share/nginx/html
-
-RUN apk add nano
-
-# Expose port 80 to the outside world
+# Stage 2: Serve the application with Nginx
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d
 EXPOSE 80
-EXPOSE 443
-
-# Start Nginx when the container runs
 CMD ["nginx", "-g", "daemon off;"]
-
-# docker run -d --name portfolio --network peterkapena portfolio
