@@ -1,9 +1,9 @@
-import { Avatar, Badge, Box, Link, Paper, styled, Tabs, Typography } from "@mui/material"
+import { Avatar, Badge, Box, Card, Chip, Divider, Link, Paper, Stack, styled, Tabs, Typography } from "@mui/material"
 import TabContext from '@mui/lab/TabContext';
 import TabPanel from '@mui/lab/TabPanel';
 import Tab from '@mui/material/Tab';
 import { useState } from "react";
-import AboutSection from "./components/AboutSection";
+import AboutSection, { Project } from "./components/AboutSection";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -44,6 +44,46 @@ const StyledTabBox = styled(Box)({
   marginLeft: "24px",
 
 });
+
+const aboutProjects: Project[] = [
+  {
+    description: `A Multi-lingual Video Conferencing Platform with Real-time Translation. Hosted by leveraging Docker compose on a Ubuntu server.
+`,
+    title: "Globetalk",
+    url: "https://globetalk.peterkapena.com",
+    year: "2024 - current"
+  },
+  {
+    description: `An IoT device with a combination of ESP32 bluetooth module and mobile to keep you hydrated.`,
+    title: "Hydrater",
+    url: "",
+    year: "2024 - current"
+  },
+  {
+    description: `A simple chat application with python Socket via UDP/TCP protocol.`,
+    title: "Pychat",
+    url: "https://github.com/peterkapena/pyChat",
+    year: "2023"
+  }
+]
+
+const experiences: Project[] = [
+  {
+    description: `A c#, VB, ASP.NET, Ms SQL Server jQuery, Typescript system that helps bursary managers, social investors, NGOs, and universities’ alumni departments manage, communicate with, finance alumni, donors, students and more.
+Designed, implemented and tested online applications forms for bursary students, applications request for funding or donating.
+Wrote code that handles the CRUD process on the server side. Maintained DevMan and its IIS hosting eco system by making modest adjustments as necessary..
+`,
+    title: "Full Stack Developer at Devman",
+    year: "2020-2023",
+    url: "https://devman3.com",
+  },
+  {
+    description: `Designed Database Systems for a client project using .NET and SQL Sever. Implemented the CO/CD in Azure DevOps.`,
+    title: "Moyo - Developer and DevOps Consultant ",
+    year: "2023-2024",
+    url: "https://moyo.co",
+  }
+]
 
 function App() {
 
@@ -91,11 +131,10 @@ function App() {
         <Box sx={{ my: 1, }}>
           <Paper sx={{ px: 3, py: 1.5, borderRadius: 5 }}>
             <Typography variant="body1" fontSize="14px" >Available for work</Typography>
-            <Typography variant="body1" fontSize="13px" color="textDisabled">2 mo ago</Typography>
+            <Typography variant="body1" fontSize="13px" color="textDisabled">1 mo ago</Typography>
           </Paper>
         </Box>
         <Box sx={{ width: "100%" }}>
-
           <TabContext value={value}>
             <Tabs
               sx={{ color: "InfoText" }}
@@ -108,6 +147,7 @@ function App() {
             >
               <Tab value="1" label="About" sx={{ fontSize: "13px", fontWeight: "100", textTransform: "none" }} />
               <Tab value="2" label="Experience" sx={{ fontSize: "13px", fontWeight: "100", textTransform: "none" }} />
+              <Tab value="3" label="Skills" sx={{ fontSize: "13px", fontWeight: "100", textTransform: "none" }} />
             </Tabs>
             <StyledTabPanel value="1">
               <StyledTabBox>
@@ -117,15 +157,36 @@ function App() {
                 <Typography variant="body1" fontSize="13px" color="textDisabled">
                   Outside work, you'll find me cherishing quality time with family and friends. In my free moments, I enjoy exploring DevOps and coding.
                   I've created many apps on both web, android, and iOS.
-                  These are personal projects that let me scratch that creative itch by seamlessly blending design, development, and tech.
+                  These are personal projects that let me scratch that creative itch by seamlessly blending IoT, development, and tech.
                 </Typography>
               </StyledTabBox>
-              <AboutSection></AboutSection>
-              <AboutSection></AboutSection>
+              <Box sx={{ my: 3 }}>
+                <Typography variant="caption">Projects worked on</Typography>
+              </Box>
+              <AboutSection projects={aboutProjects}></AboutSection>
             </StyledTabPanel>
             <StyledTabPanel value="2">
               <StyledTabBox>
-                <AboutSection></AboutSection>
+                <AboutSection projects={experiences}></AboutSection>
+              </StyledTabBox>
+            </StyledTabPanel>
+            <StyledTabPanel value="3">
+              <StyledTabBox>
+                 <Card variant="outlined" >
+                  <Box sx={{ p: 2 }}>
+                  <Typography gutterBottom component="div">
+                      Programming languages
+                      </Typography>
+                   </Box>
+                  <Divider />
+                  <Box sx={{ p: 2 }}>
+                    <Stack direction="row" spacing={1}>
+                      <Chip color="primary" label="Soft" size="small" />
+                      <Chip label="Medium" size="small" />
+                      <Chip label="Hard" size="small" />
+                    </Stack>
+                  </Box>
+                </Card>
               </StyledTabBox>
             </StyledTabPanel>
           </TabContext>
