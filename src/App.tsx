@@ -1,9 +1,10 @@
-import { Avatar, Badge, Box, Card, Chip, Divider, Link, Paper, Stack, styled, Tabs, Typography } from "@mui/material"
+import { Avatar, Badge, Box, Chip, Link, Paper, styled, Tabs, Typography } from "@mui/material"
 import TabContext from '@mui/lab/TabContext';
 import TabPanel from '@mui/lab/TabPanel';
 import Tab from '@mui/material/Tab';
 import { useState } from "react";
 import AboutSection, { Project } from "./components/AboutSection";
+import { CloudCircle } from "@mui/icons-material";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -85,6 +86,38 @@ Wrote code that handles the CRUD process on the server side. Maintained DevMan a
   }
 ]
 
+const skils: string[] = [
+  "React JS",
+  "Typescript",
+  "GraphQL",
+  "Material Design",
+  "Node JS",
+  "Mongo DB",
+  "REST API",
+  "GRPC",
+  "Docker",
+  "Kubernetes",
+  "Azure DevOps",
+  "Jenkins",
+  "VS Code",
+  ".NET C#/VB",
+  "SQL Server",
+  "Flutter",
+  "Python",
+  "CC++ with Arduino",
+  "Git",
+  "Bootstrap",
+  "jQuery",
+  "SOAP Services",
+]
+const cloud: string[] = [
+  "Azure",
+  "Google Cloud",
+  "Oracle Cloud",
+  "AWS",
+  "Ubuntu Linux",
+  "Microsoft Server IIS",
+]
 function App() {
 
   const [value, setValue] = useState('1');
@@ -128,7 +161,7 @@ function App() {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ my: 1, }}>
+        <Box sx={{ my: 2, }}>
           <Paper sx={{ px: 3, py: 1.5, borderRadius: 5 }}>
             <Typography variant="body1" fontSize="14px" >Available for work</Typography>
             <Typography variant="body1" fontSize="13px" color="textDisabled">1 mo ago</Typography>
@@ -172,23 +205,13 @@ function App() {
             </StyledTabPanel>
             <StyledTabPanel value="3">
               <StyledTabBox>
-                 <Card variant="outlined" >
-                  <Box sx={{ p: 2 }}>
-                  <Typography gutterBottom component="div">
-                      Programming languages
-                      </Typography>
-                   </Box>
-                  <Divider />
-                  <Box sx={{ p: 2 }}>
-                    <Stack direction="row" spacing={1}>
-                      <Chip color="primary" label="Soft" size="small" />
-                      <Chip label="Medium" size="small" />
-                      <Chip label="Hard" size="small" />
-                    </Stack>
-                  </Box>
-                </Card>
+                {skils.map(skill => (<Chip label={skill} sx={{ m: 1 }} />))}
               </StyledTabBox>
             </StyledTabPanel>
+            <Typography variant="caption">Cloud</Typography>
+            <StyledTabBox>
+              {cloud.map(skill => (<Chip label={skill} icon={<CloudCircle />} sx={{ m: 1 }} />))}
+            </StyledTabBox>
           </TabContext>
         </Box>
       </Box>
