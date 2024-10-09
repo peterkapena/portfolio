@@ -5,7 +5,6 @@ import AboutSection from "./components/AboutSection"
 import { aboutProjects, experiences, skils, cloud } from "./data"
 import { useState } from "react"
 
-
 const StyledTabPanel = styled(TabPanel)({
     padding: 0,
     margin: 0
@@ -17,13 +16,23 @@ const StyledTabBox = styled(Box)({
 
 });
 
-function Body() {
+const colors: Array<'default' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning'> = [
+    'default',
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning'
+];
 
+
+function Body() {
     const [value, setValue] = useState('1');
 
     const handleChange = (_event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue);
     };
+
     return (
         <Box sx={{ width: "100%" }}>
             <TabContext value={value}>
@@ -63,11 +72,15 @@ function Body() {
                 </StyledTabPanel>
                 <StyledTabPanel value="3">
                     <StyledTabBox>
-                        {skils.map(skill => (<Chip label={skill} sx={{ m: 1 }} />))}
+                        {skils.map(skill => (<Chip variant="outlined" size="medium"
+                            color={colors[Math.floor(Math.random() * colors.length)]}
+                            label={skill}
+                            sx={{ m: 1 }}
+                        />))}
                     </StyledTabBox>
                     <Typography variant="caption">Cloud</Typography>
                     <StyledTabBox>
-                        {cloud.map(skill => (<Chip label={skill} icon={<CloudCircle />} sx={{ m: 1 }} />))}
+                        {cloud.map(skill => (<Chip color="secondary" variant="outlined" label={skill} icon={<CloudCircle />} sx={{ m: 1 }} />))}
                     </StyledTabBox>
                 </StyledTabPanel>
             </TabContext>

@@ -63,6 +63,9 @@ export const skils: string[] = [
     "Bootstrap",
     "jQuery",
     "SOAP Services",
+    "Android studio",
+    "VS Code",
+    "Visual Studio",
 ]
 
 export const cloud: string[] = [

@@ -10,12 +10,11 @@ function App() {
         m: 5,
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
       <Box
         sx={{
-          minHeight: "100vh", // Full viewport height
           display: "flex",
           flexDirection: "column",
           width: { xs: "100%", md: "35%" },
