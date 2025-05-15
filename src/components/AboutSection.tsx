@@ -1,6 +1,5 @@
 import { OpenInNew } from "@mui/icons-material";
-import Grid from "@mui/material/Grid2";
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography, Link, Grid } from "@mui/material";
 
 // Define the type for a project
 export interface Project {
@@ -34,8 +33,8 @@ function AboutSection({ projects }: { projects: Project[] }) {
                                     underline="none"
                                 >
                                     {project.title}
-                                     <OpenInNew fontSize="inherit" sx={{ml:1}} />
-                                    </Link>
+                                    <OpenInNew fontSize="inherit" sx={{ ml: 1 }} />
+                                </Link>
                             </Box>
                             <Typography variant="body1" fontSize="13px" color="textSecondary">
                                 {project.description}
